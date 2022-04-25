@@ -5,7 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment two</title>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(function() {
+            $('.DEMO').click(function(){
+                $(this).css('color','blue');
+            });
+            
+            $('.DEMO').mouseenter(function(){
+                $(this).css('font-family','Impact');
+            });
+            $('.DEMO').mouseleave(function(){
+                $(this).css('font-family','Times New Roman');
+            });
+        });
+        </script>
 </head>
 <body>
     <div class="container">
@@ -13,5 +27,64 @@
         <h1 id="second">This is second heading </h1>
         <h1 id="third">This is third heading</h1>
      </div>
+     <h2>Child Selector</h2>
+
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph 3 in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph 4 in the div.</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+
+<p>Paragraph 3. After a div.</p>
+<p>Paragraph 4. After a div.</p>
+
+<div>
+  <p>Paragraph 5 in the div.</p>
+  <p>Paragraph 6 in the div.</p>
+</div>
+
+<p>Paragraph 7. After a div.</p>
+<p>Paragraph 8. After a div.</p>
+<h2>General Sibling Selector</h2>
+
+<p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+
+<p>Paragraph 1.</p>
+
+<div>
+  <p>Paragraph 2.</p>
+</div>
+
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
+<h1>Transition and Transform effects</h1>
+
+<p>Hover over the div element below to see the Transition Effect:</p>
+
+<center>
+    <div id="menu" class="inner"></div>
+</center>
+<h1 class="DEMO">Click me to watch me turn blue</h1>
+<h1 class="DEMO">Hover over me to temporarily change my font</h1>
+
 </body>
 </html>
